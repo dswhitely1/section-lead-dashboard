@@ -32,8 +32,6 @@ function login(req, res) {
         if (isMatch) {
           const token = generateToken(user);
           res.json({
-            username: user.username,
-            id: user.id,
             token: `Bearer ${token}`,
           });
         } else {
