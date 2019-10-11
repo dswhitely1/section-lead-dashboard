@@ -6,7 +6,7 @@ exports.up = function(knex) {
     tbl.string('github').defaultTo(null);
     tbl.string('operatingSystem').defaultTo(null);
     tbl.string('timeZone').defaultTo(null);
-    tbl.timeStamps(true, true);
+    tbl.timestamps(true, true);
   });
 };
 
