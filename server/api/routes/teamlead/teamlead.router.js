@@ -13,7 +13,6 @@ function allTeamLeads(req, res) {
 function teamLead(req, res) {
   TeamLeads.findById(req.params.id)
     .then(user => {
-      console.log(user);
       if (user) {
         res.json(user);
       } else {

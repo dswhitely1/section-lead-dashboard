@@ -19,7 +19,6 @@ function getStudentsByTeamLeadId(req, res) {
 function students(req, res) {
   Students.findById(req.params.id)
     .then(user => {
-      console.log(user);
       if (user) {
         res.json(user);
       } else {
