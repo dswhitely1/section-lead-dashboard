@@ -17,10 +17,11 @@ async function add(unit) {
   return findById(id);
 }
 
-function update(unit) {
-  return db('units')
-    .where('id', unit.id)
+function update(id, unit) {
+  db('units')
+    .where({ id })
     .update(unit);
+  return findById(id);
 }
 
 function remove(id) {

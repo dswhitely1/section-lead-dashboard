@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="149a2c64-33a0-4935-a250-e523f1fb7ec3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/routes/teamlead/teamlead.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/routes/routes.index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/routes/routes.index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +21,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.11.1" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dswhi\AppData\Roaming\npm\node_modules\prettier" />
   </component>
@@ -47,8 +51,100 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570800437948</updated>
-      <workItem from="1570800440787" duration="1514000" />
+      <workItem from="1570800440787" duration="10946000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Lint Fix script, switch from Linux to Windows for node modules">
+      <created>1570801991531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570801991531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Migration for Unit Table">
+      <created>1570802013791</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802013791</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Migration for Sprints Table">
+      <created>1570802031779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802031779</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Migration for Modules Table">
+      <created>1570802049048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802049048</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding Webstorm Configuration Files">
+      <created>1570802076015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802076015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created Attendance Table">
+      <created>1570802998507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802998507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed Timestamps">
+      <created>1570803014365</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570803014365</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Attendance Model Defined">
+      <created>1570811470105</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811470105</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Module Attendance Defined">
+      <created>1570811500201</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811500201</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sprint Model Defined">
+      <created>1570811524045</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811524045</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Student Model Defined">
+      <created>1570811542286</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811542286</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Team Lead Model Defined">
+      <created>1570811556302</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811556302</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Unit Model Defined">
+      <created>1570811567119</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570811567119</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,5 +160,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Lint Fix script, switch from Linux to Windows for node modules" />
+    <MESSAGE value="Added Migration for Unit Table" />
+    <MESSAGE value="Added Migration for Sprints Table" />
+    <MESSAGE value="Added Migration for Modules Table" />
+    <MESSAGE value="Adding Webstorm Configuration Files" />
+    <MESSAGE value="Created Attendance Table" />
+    <MESSAGE value="Fixed Timestamps" />
+    <MESSAGE value="Attendance Model Defined" />
+    <MESSAGE value="Module Attendance Defined" />
+    <MESSAGE value="Sprint Model Defined" />
+    <MESSAGE value="Student Model Defined" />
+    <MESSAGE value="Team Lead Model Defined" />
+    <MESSAGE value="Unit Model Defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit Model Defined" />
   </component>
 </project>

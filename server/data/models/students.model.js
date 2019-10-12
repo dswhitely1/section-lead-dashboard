@@ -9,7 +9,9 @@ function findBy(filter) {
 }
 
 function findById(id) {
-  return db('students').where({ id });
+  return db('students')
+    .where({ id })
+    .first();
 }
 
 function findByTeamLeadId(id) {
@@ -21,10 +23,11 @@ async function add(student) {
   return findById(id);
 }
 
-function update(student) {
-  return db('students')
-    .where('id', student.id)
+function update(id, student) {
+  db('students')
+    .where({ id })
     .update(student);
+  return findById(id);
 }
 
 function remove(id) {

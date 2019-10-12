@@ -9,7 +9,9 @@ function findBy(filter) {
 }
 
 function findById(id) {
-  return db('teamLeads').where({ id });
+  return db('teamLeads')
+    .where({ id })
+    .first();
 }
 
 async function add(teamLead) {
@@ -17,10 +19,11 @@ async function add(teamLead) {
   return findById(id);
 }
 
-function update(teamLead) {
-  return db('teamLeads')
-    .where('id', teamLead.id)
+async function update(id, teamLead) {
+  await db('teamLeads')
+    .where({ id })
     .update(teamLead);
+  return findById(id);
 }
 
 function remove(id) {
