@@ -21,10 +21,11 @@ async function add(attendanceData) {
   return findById(id);
 }
 
-function update(attendanceData) {
-  return db('attendance')
-    .where('id', attendanceData.id)
+function update(id, attendanceData) {
+  db('attendance')
+    .where({ id })
     .update(attendanceData);
+  return findById(id);
 }
 
 function remove(id) {

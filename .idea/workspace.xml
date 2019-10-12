@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="149a2c64-33a0-4935-a250-e523f1fb7ec3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/api/routes/teamlead/teamlead.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/routes/routes.index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/routes/routes.index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570800437948</updated>
       <workItem from="1570800440787" duration="10946000" />
+      <workItem from="1570842117490" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="Added Lint Fix script, switch from Linux to Windows for node modules">
       <created>1570801991531</created>
@@ -144,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570811567119</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updating Routing.">
+      <created>1570842149788</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570842149788</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Student Router defined">
+      <created>1570842170433</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570842170433</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +168,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -175,6 +190,8 @@
     <MESSAGE value="Student Model Defined" />
     <MESSAGE value="Team Lead Model Defined" />
     <MESSAGE value="Unit Model Defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit Model Defined" />
+    <MESSAGE value="Updating Routing." />
+    <MESSAGE value="Student Router defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student Router defined" />
   </component>
 </project>

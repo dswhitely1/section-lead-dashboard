@@ -12,8 +12,7 @@ exports.up = function(knex) {
       .inTable('teamLeads')
       .unsigned()
       .onDelete('CASCADE')
-      .onUpdate('CASCADE')
-      .notNullable();
+      .onUpdate('CASCADE');
     tbl.timestamps(true, true);
   });
 };

@@ -2,6 +2,7 @@ const express = require('express');
 
 const teamLeadRouter = express.Router();
 const TeamLeads = require('../../../data/models/teamlead.model');
+const peopleValidator = require('../../validators/people.validator');
 
 function allTeamLeads(req, res) {
   TeamLeads.findAll()
@@ -12,7 +13,6 @@ function allTeamLeads(req, res) {
 function teamLead(req, res) {
   TeamLeads.findById(req.params.id)
     .then(user => {
-      console.log(user);
       if (user) {
         res.json(user);
       } else {
@@ -23,6 +23,10 @@ function teamLead(req, res) {
 }
 
 function addTeamLead(req, res) {
+  const { errors, isValid } = peopleValidator(req.body);
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
   TeamLeads.add(req.body)
     .then(saved => {
       if (saved) {
