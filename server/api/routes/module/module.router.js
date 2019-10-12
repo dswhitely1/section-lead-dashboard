@@ -61,12 +61,11 @@ function deleteModule(req, res) {
     .then(count => res.json(count))
     .catch(err => res.status(500).json(err));
 }
-
-module.exports = {
-  allModules,
-  moduleById,
-  modulesBySprintId,
-  addModule,
-  updateModule,
-  deleteModule,
-};
+moduleRouter
+  .get('/', allModules)
+  .get('/:id', moduleById)
+  .get('/sprint/:id', modulesBySprintId)
+  .post('/', addModule)
+  .put('/:id', updateModule)
+  .delete('/:id', deleteModule);
+module.exports = moduleRouter;
