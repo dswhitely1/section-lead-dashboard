@@ -2,6 +2,7 @@ const express = require('express');
 
 const studentsRouter = express.Router();
 const Students = require('../../../data/models/students.model');
+const peopleValidator = require('../../validators/people.validator');
 
 function allstudents(req, res) {
   Students.findAll()
@@ -29,6 +30,10 @@ function students(req, res) {
 }
 
 function addstudents(req, res) {
+  const { errors, isValid } = peopleValidator(req.body);
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
   Students.add(req.body)
     .then(saved => {
       if (saved) {
