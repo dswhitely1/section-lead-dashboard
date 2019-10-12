@@ -11,27 +11,27 @@ module.exports = server => {
   server.use('/api/auth', authRouter);
   server.use(
     '/api/team',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     teamLeadRouter
   );
   server.use(
     '/api/student',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     studentRouter
   );
   server.use(
     '/api/unit',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     unitRouter
   );
   server.use(
     '/api/unit/sprint',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     sprintRouter
   );
   server.use(
     '/api/unit/sprint/module',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     moduleRouter
   );
   server.use(
