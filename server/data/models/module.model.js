@@ -21,10 +21,11 @@ async function add(moduleData) {
   return findById(id);
 }
 
-function update(moduleData) {
-  return db('modules')
-    .where('id', moduleData.id)
+function update(id, moduleData) {
+  db('modules')
+    .where({ id })
     .update(moduleData);
+  return findById(id);
 }
 
 function remove(id) {

@@ -21,10 +21,11 @@ async function add(sprint) {
   return findById(id);
 }
 
-function update(sprint) {
-  return db('sprints')
-    .where('id', sprint.id)
+function update(id, sprint) {
+  db('sprints')
+    .where({ id })
     .update(sprint);
+  return findById(id);
 }
 
 function remove(id) {

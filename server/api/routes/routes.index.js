@@ -2,6 +2,8 @@ const passport = require('passport');
 const authRouter = require('./auth/auth.router');
 const teamLeadRouter = require('./teamlead/teamlead.router');
 const studentRouter = require('./students/student.router');
+const unitRouter = require('./unit/unit.router');
+const sprintRouter = require('./sprint/sprint.router');
 
 module.exports = server => {
   server.use('/api/auth', authRouter);
@@ -14,5 +16,15 @@ module.exports = server => {
     '/api/student',
     // passport.authenticate('jwt', { session: false }),
     studentRouter
+  );
+  server.use(
+    '/api/unit',
+    // passport.authenticate('jwt', { session: false }),
+    unitRouter
+  );
+  server.use(
+    '/api/unit/sprint',
+    passport.authenticate('jwt', { session: false }),
+    sprintRouter
   );
 };
