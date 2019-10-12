@@ -12,3 +12,5 @@ function unitValidator(data) {
     isValid: isEmpty(errors),
   };
 }
+
+module.exports = unitValidator;
