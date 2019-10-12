@@ -10,11 +10,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         include: path.resolve(__dirname, 'src'),
         use: ['babel-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
