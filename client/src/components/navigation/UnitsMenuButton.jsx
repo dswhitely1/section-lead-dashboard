@@ -3,6 +3,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link as RouterLink } from 'react-router-dom';
 
 function UnitsMenuButton({ handleMenu, anchorEl: { units }, handleClose }) {
   return (
@@ -20,7 +21,12 @@ function UnitsMenuButton({ handleMenu, anchorEl: { units }, handleClose }) {
         onClose={() => handleClose('teamLead')}
         name="units"
       >
-        <MenuItem name="units" onClick={() => handleClose('units')}>
+        <MenuItem
+          name="units"
+          component={RouterLink}
+          to="/dashboard/units"
+          onClick={() => handleClose('units')}
+        >
           Units
         </MenuItem>
         <MenuItem name="units" onClick={() => handleClose('units')}>

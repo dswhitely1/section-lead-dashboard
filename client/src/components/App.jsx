@@ -10,6 +10,7 @@ import theme from '../themes/mainTheme';
 import Dashboard from './dashboard/Dashboard';
 import PrivateRoute from './auth/PrivateRoute';
 import { useUnitActions } from '../store/unit/useUnitActions';
+import UnitDashboard from './units/UnitDashboard';
 
 function App() {
   const authActions = useAuthActions();
@@ -20,6 +21,7 @@ function App() {
         <CssBaseline />
         <NavBar />
         <Switch>
+          <PrivateRoute path="/dashboard/units" component={UnitDashboard} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <Route path="/register" component={LoginRegister} />
           <Route path="/login" component={LoginRegister} />
