@@ -1,15 +1,6 @@
-import React, { useEffect, useContext } from 'react';
-import { ActionsContext } from '../../contexts/ActionsContext';
+import React from 'react';
 
 function Dashboard() {
-  const {
-    unitActions: { fetchUnits },
-  } = useContext(ActionsContext);
-
-  useEffect(() => {
-    fetchUnits();
-  }, [fetchUnits]);
-
   return <h1>Dashboard</h1>;
 }
 

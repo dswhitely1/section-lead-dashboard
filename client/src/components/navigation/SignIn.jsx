@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import { ActionsContext } from '../../contexts/ActionsContext';
 import TeamLeadMenuButton from './TeamLeadMenuButton';

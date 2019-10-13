@@ -29,7 +29,12 @@ function UnitsMenuButton({ handleMenu, anchorEl: { units }, handleClose }) {
         >
           Units
         </MenuItem>
-        <MenuItem name="units" onClick={() => handleClose('units')}>
+        <MenuItem
+          name="units"
+          component={RouterLink}
+          to="/dashboard/sprints"
+          onClick={() => handleClose('units')}
+        >
           Sprints
         </MenuItem>
         <MenuItem name="units" onClick={() => handleClose('units')}>

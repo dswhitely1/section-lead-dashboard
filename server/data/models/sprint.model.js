@@ -17,21 +17,22 @@ function findByUnitId(id) {
 }
 
 async function add(sprint) {
-  const [id] = await db('sprints').insert(sprint);
-  return findById(id);
+  await db('sprints').insert(sprint);
+  return findAll();
 }
 
 function update(id, sprint) {
   db('sprints')
     .where({ id })
     .update(sprint);
-  return findById(id);
+  return findAll();
 }
 
 function remove(id) {
-  return db('sprints')
+  db('sprints')
     .where({ id })
     .del();
+  return findAll();
 }
 
 module.exports = {

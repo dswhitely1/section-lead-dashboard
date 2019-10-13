@@ -21,7 +21,7 @@ export const useUnitActions = () => {
   const dispatch = useDispatch();
   const tokenService = useLocalStorage('sl_token');
   const token = tokenService.getLocalStorage();
-  console.log(token);
+
   const fetchUnits = useCallback(() => {
     dispatch({ type: GET_UNITS_START });
     axios(token)

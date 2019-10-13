@@ -25,12 +25,12 @@ module.exports = server => {
     unitRouter
   );
   server.use(
-    '/api/unit/sprint',
+    '/api/sprint',
     passport.authenticate('jwt', { session: false }),
     sprintRouter
   );
   server.use(
-    '/api/unit/sprint/module',
+    '/api/module',
     passport.authenticate('jwt', { session: false }),
     moduleRouter
   );
