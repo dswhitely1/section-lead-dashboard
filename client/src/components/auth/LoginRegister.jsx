@@ -42,8 +42,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function LoginRegister({ match: { url } }) {
+function LoginRegister({ match: { url }, history: { push } }) {
   const [isRegister, setIsRegister] = useState(false);
+  const isAuth = useSelector(state => state.auth.isAuth);
   const {
     authActions: { login, register },
   } = useContext(ActionsContext);
@@ -72,7 +73,11 @@ function LoginRegister({ match: { url } }) {
       setIsRegister(false);
     }
   }, [url]);
-
+  useEffect(() => {
+    if (isAuth) {
+      push('/dashboard');
+    }
+  }, [isAuth, push]);
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>

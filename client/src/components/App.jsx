@@ -7,6 +7,8 @@ import { useAuthActions } from '../store/auth/useAuthActions';
 import NavBar from './navigation/NavBar';
 import LoginRegister from './auth/LoginRegister';
 import theme from '../themes/mainTheme';
+import Dashboard from './dashboard/Dashboard';
+import PrivateRoute from './auth/PrivateRoute';
 
 function App() {
   const authActions = useAuthActions();
@@ -16,6 +18,7 @@ function App() {
         <CssBaseline />
         <NavBar />
         <Switch>
+          <PrivateRoute path="/dashboard" component={Dashboard} />
           <Route path="/register" component={LoginRegister} />
           <Route path="/login" component={LoginRegister} />
         </Switch>
