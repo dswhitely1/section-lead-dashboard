@@ -3,6 +3,7 @@ exports.up = function(knex) {
     tbl.increments();
     tbl.string('firstName').notNullable();
     tbl.string('lastName').notNullable();
+    tbl.string('cohort').defaultTo(null);
     tbl.string('github').defaultTo(null);
     tbl.string('operatingSystem').defaultTo(null);
     tbl.string('timeZone').defaultTo(null);
