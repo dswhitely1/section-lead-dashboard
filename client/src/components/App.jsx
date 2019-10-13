@@ -9,12 +9,14 @@ import LoginRegister from './auth/LoginRegister';
 import theme from '../themes/mainTheme';
 import Dashboard from './dashboard/Dashboard';
 import PrivateRoute from './auth/PrivateRoute';
+import { useUnitActions } from '../store/unit/useUnitActions';
 
 function App() {
   const authActions = useAuthActions();
+  const unitActions = useUnitActions();
   return (
     <MuiThemeProvider theme={theme}>
-      <ActionsProvider value={{ authActions }}>
+      <ActionsProvider value={{ authActions, unitActions }}>
         <CssBaseline />
         <NavBar />
         <Switch>

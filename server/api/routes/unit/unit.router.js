@@ -52,7 +52,7 @@ function updateUnit(req, res) {
 
 function deleteUnit(req, res) {
   Units.remove(req.params.id)
-    .then(count => res.json(count))
+    .then(units => res.json(units))
     .catch(err => res.status(500).json(err));
 }
 

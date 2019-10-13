@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import { useSelector } from 'react-redux';
-import { Link as RouterLink } from 'react-router-dom';
-import { ActionsContext } from '../../contexts/ActionsContext';
+import SignOutLinks from './SignOut';
+import SignInLinks from './SignIn';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,12 +15,11 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
 }));
+
 function NavBar() {
-  const {
-    authActions: { logout },
-  } = useContext(ActionsContext);
   const isAuth = useSelector(state => state.auth.isAuth);
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -26,21 +27,7 @@ function NavBar() {
           <Typography variant="h6" className={classes.title}>
             Section Lead Dashboard
           </Typography>
-          {!isAuth && (
-            <Button component={RouterLink} to="/register" color="inherit">
-              Register
-            </Button>
-          )}
-          {!isAuth && (
-            <Button component={RouterLink} to="/login" color="inherit">
-              Login
-            </Button>
-          )}
-          {isAuth && (
-            <Button color="inherit" onClick={() => logout()}>
-              Logout
-            </Button>
-          )}
+          {isAuth ? <SignInLinks /> : <SignOutLinks />}
         </Toolbar>
       </AppBar>
     </div>

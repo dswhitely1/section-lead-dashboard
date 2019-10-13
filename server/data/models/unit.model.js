@@ -13,21 +13,22 @@ function findById(id) {
 }
 
 async function add(unit) {
-  const [id] = await db('units').insert(unit);
-  return findById(id);
+  await db('units').insert(unit);
+  return findAll();
 }
 
 function update(id, unit) {
   db('units')
     .where({ id })
     .update(unit);
-  return findById(id);
+  return findAll();
 }
 
 function remove(id) {
-  return db('units')
+  db('units')
     .where({ id })
     .del();
+  return findAll();
 }
 
 module.exports = {
