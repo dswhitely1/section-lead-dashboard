@@ -17,15 +17,15 @@ async function add(unit) {
   return findAll();
 }
 
-function update(id, unit) {
-  db('units')
+async function update(id, unit) {
+  await db('units')
     .where({ id })
     .update(unit);
   return findAll();
 }
 
-function remove(id) {
-  db('units')
+async function remove(id) {
+  await db('units')
     .where({ id })
     .del();
   return findAll();

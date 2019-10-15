@@ -19,49 +19,47 @@ import {
 
 export const useSprintActions = () => {
   const dispatch = useDispatch();
-  const tokenService = useLocalStorage('sl_token');
-  const token = tokenService.getLocalStorage();
 
   const fetchSprints = useCallback(() => {
     dispatch({ type: GET_SPRINTS_START });
-    axios(token)
+    axios()
       .get('/sprint')
       .then(res => dispatch({ type: GET_SPRINTS_SUCCESS, payload: res.data }))
       .catch(err =>
         dispatch({ type: GET_SPRINTS_FAILURE, payload: err.response })
       );
-  }, [dispatch, token]);
+  }, [dispatch]);
 
   const addSprint = useCallback(
     sprint => {
       dispatch({ type: POST_SPRINT_START });
-      axios(token)
+      axios()
         .post('/sprint', sprint)
         .then(res => dispatch({ type: POST_SPRINT_SUCCESS, payload: res.data }))
         .catch(err =>
           dispatch({ type: POST_SPRINT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   const updateSprint = useCallback(
     sprint => {
       dispatch({ type: PUT_SPRINT_START });
-      axios(token)
+      axios()
         .put(`/sprint/${sprint.id}`, sprint)
         .then(res => dispatch({ type: PUT_SPRINT_SUCCESS, payload: res.data }))
         .catch(err =>
           dispatch({ type: PUT_SPRINT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   const deleteSprint = useCallback(
     id => {
       dispatch({ type: DELETE_SPRINT_START });
-      axios(token)
+      axios()
         .delete(`/sprint/${id}`)
         .then(res =>
           dispatch({ type: DELETE_SPRINT_SUCCESS, payload: res.data })
@@ -70,7 +68,7 @@ export const useSprintActions = () => {
           dispatch({ type: DELETE_SPRINT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   return { fetchSprints, addSprint, updateSprint, deleteSprint };

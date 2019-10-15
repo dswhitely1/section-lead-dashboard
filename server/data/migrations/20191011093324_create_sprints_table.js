@@ -9,7 +9,7 @@ exports.up = function(knex) {
     tbl
       .integer('unitId')
       .references('id')
-      .inTable('unit')
+      .inTable('units')
       .unsigned()
       .onUpdate('CASCADE')
       .onDelete('CASCADE')

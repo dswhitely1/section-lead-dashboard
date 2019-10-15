@@ -1,8 +1,11 @@
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './data/dashboard.db3',
+      host: process.env.MYDBHOST,
+      database: 'dashboard',
+      user: process.env.MYDBUSER,
+      password: process.env.MYDBPASSWORD,
     },
     migrations: {
       directory: './data/migrations',

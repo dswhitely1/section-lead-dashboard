@@ -24,7 +24,7 @@ function UnitDashboard() {
     <div className={classes.root}>
       <UnitNavigation />
       {units.map(unit => (
-        <UnitCard key={unit.id} name={unit.name} />
+        <UnitCard key={unit.id} unit={unit} />
       ))}
     </div>
   );

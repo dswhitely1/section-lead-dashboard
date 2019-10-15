@@ -5,6 +5,7 @@ const Sprints = require('../../../data/models/sprint.model');
 const unitValidator = require('../../validators/unit.validator');
 
 function allSprints(req, res) {
+  console.log(req.header);
   Sprints.findAll()
     .then(foundSprints => res.json(foundSprints))
     .catch(err => res.status(500).json(err));

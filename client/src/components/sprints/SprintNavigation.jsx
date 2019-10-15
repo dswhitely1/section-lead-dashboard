@@ -46,7 +46,7 @@ function SprintNavigation() {
     <AppBar>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          Units
+          Sprints
         </Typography>
         <Button color="inherit" onClick={() => setOpen(true)}>
           Add Sprint
@@ -73,8 +73,8 @@ function SprintNavigation() {
               fullWidth
             />
             <Select value={values.unitId} name="unitId" onChange={handleChange}>
-              {units.map(unit => (
-                <MenuItem value={unit.id}>{`${unit.name}`}</MenuItem>
+              {units.map(({ id, name }) => (
+                <MenuItem key={id} value={id}>{`${name}`}</MenuItem>
               ))}
             </Select>
           </form>

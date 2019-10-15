@@ -16,7 +16,7 @@ function SprintsDashboard() {
     <>
       <SprintNavigation />
       {sprints.map(sprint => (
-        <SprintCard sprint={sprint} />
+        <SprintCard key={sprint.id} sprint={sprint} />
       ))}
     </>
   );

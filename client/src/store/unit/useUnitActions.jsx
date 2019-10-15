@@ -19,56 +19,54 @@ import {
 
 export const useUnitActions = () => {
   const dispatch = useDispatch();
-  const tokenService = useLocalStorage('sl_token');
-  const token = tokenService.getLocalStorage();
 
   const fetchUnits = useCallback(() => {
     dispatch({ type: GET_UNITS_START });
-    axios(token)
+    axios()
       .get('/unit')
       .then(res => dispatch({ type: GET_UNITS_SUCCESS, payload: res.data }))
       .catch(err =>
         dispatch({ type: GET_UNITS_FAILURE, payload: err.response })
       );
-  }, [dispatch, token]);
+  }, [dispatch]);
 
   const addUnit = useCallback(
     unit => {
       dispatch({ type: POST_UNIT_START });
-      axios(token)
+      axios()
         .post('/unit', unit)
         .then(res => dispatch({ type: POST_UNIT_SUCCESS, payload: res.data }))
         .catch(err =>
           dispatch({ type: POST_UNIT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   const updateUnit = useCallback(
     unit => {
       dispatch({ type: PUT_UNIT_START });
-      axios(token)
+      axios()
         .put(`/unit/${unit.id}`, unit)
         .then(res => dispatch({ type: PUT_UNIT_SUCCESS, payload: res.data }))
         .catch(err =>
           dispatch({ type: PUT_UNIT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   const deleteUnit = useCallback(
     id => {
       dispatch({ type: DELETE_UNIT_START });
-      axios(token)
+      axios()
         .delete(`/unit/${id}`)
         .then(res => dispatch({ type: DELETE_UNIT_SUCCESS, payload: res.data }))
         .catch(err =>
           dispatch({ type: DELETE_UNIT_FAILURE, payload: err.response })
         );
     },
-    [dispatch, token]
+    [dispatch]
   );
 
   return { fetchUnits, addUnit, updateUnit, deleteUnit };

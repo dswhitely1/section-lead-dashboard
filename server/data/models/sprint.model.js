@@ -21,15 +21,15 @@ async function add(sprint) {
   return findAll();
 }
 
-function update(id, sprint) {
-  db('sprints')
+async function update(id, sprint) {
+  await db('sprints')
     .where({ id })
     .update(sprint);
   return findAll();
 }
 
-function remove(id) {
-  db('sprints')
+async function remove(id) {
+  await db('sprints')
     .where({ id })
     .del();
   return findAll();
