@@ -11,12 +11,16 @@ import { useUnitActions } from '../store/unit/useUnitActions';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useSprintActions } from '../store/sprints/useSprintActions';
 import Routes from './routes/Routes';
+import { useModuleActions } from '../store/modules/useModuleActions';
 
 function App () {
   const tokenService = useLocalStorage('sl_token');
+  const moduleActions = useModuleActions();
   const authActions = useAuthActions();
   const unitActions = useUnitActions();
   const sprintActions = useSprintActions();
+
+  const actions = { authActions, moduleActions, sprintActions, unitActions };
   useEffect(() => {
     if (tokenService.testLocalStorage()) {
       const expiredTime = jwtDecode(tokenService.getLocalStorage());
@@ -31,7 +35,7 @@ function App () {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ActionsProvider value={{ authActions, unitActions, sprintActions }}>
+      <ActionsProvider value={actions}>
         <CssBaseline />
         <NavBar />
         <Switch>
