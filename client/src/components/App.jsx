@@ -15,6 +15,8 @@ import UnitDashboard from './units/UnitDashboard';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useSprintActions } from '../store/sprints/useSprintActions';
 import SprintsDashboard from './sprints/SprintsDashboard';
+import SprintForm from './sprints/SprintForm';
+import HomePage from './homepage/HomePage';
 
 function App() {
   const tokenService = useLocalStorage('sl_token');
@@ -39,6 +41,7 @@ function App() {
         <CssBaseline />
         <NavBar />
         <Switch>
+          <PrivateRoute path="/dashboard/sprints/sprint" component={SprintForm} />
           <PrivateRoute
             path="/dashboard/sprints"
             component={SprintsDashboard}
@@ -47,6 +50,7 @@ function App() {
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <Route path="/register" component={LoginRegister} />
           <Route path="/login" component={LoginRegister} />
+          <Route exact path="/" component={HomePage} />
         </Switch>
       </ActionsProvider>
     </MuiThemeProvider>

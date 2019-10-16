@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="149a2c64-33a0-4935-a250-e523f1fb7ec3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/homepage/HomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/sprints/SprintCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sprints/SprintCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/sprints/SprintForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sprints/SprintForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/sprints/SprintNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sprints/SprintNavigation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/sprints/SprintsDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sprints/SprintsDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/units/UnitCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/units/UnitCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/units/UnitDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/units/UnitDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/sprints/useSprintActions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/sprints/useSprintActions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/unit/useUnitActions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/unit/useUnitActions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/utils/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/utils/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/themes/mainTheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/themes/mainTheme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/config/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/routes/routes.index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/routes/routes.index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/routes/sprint/sprint.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/routes/sprint/sprint.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/migrations/20191011093324_create_sprints_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/migrations/20191011093324_create_sprints_table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/models/sprint.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/models/sprint.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/data/models/unit.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/data/models/unit.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/knexfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/knexfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +60,9 @@
       <workItem from="1570800440787" duration="10946000" />
       <workItem from="1570842117490" duration="1258000" />
       <workItem from="1571087896464" duration="440000" />
+      <workItem from="1571139231577" duration="2790000" />
+      <workItem from="1571156853795" duration="6951000" />
+      <workItem from="1571180324842" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="Added Lint Fix script, switch from Linux to Windows for node modules">
       <created>1570801991531</created>
@@ -175,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570842170433</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Switched back to ReactScripts, removed webpack, eslint, and babelrc config files">
+      <created>1571139357361</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571139357361</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +211,7 @@
     <MESSAGE value="Unit Model Defined" />
     <MESSAGE value="Updating Routing." />
     <MESSAGE value="Student Router defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student Router defined" />
+    <MESSAGE value="Switched back to ReactScripts, removed webpack, eslint, and babelrc config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched back to ReactScripts, removed webpack, eslint, and babelrc config files" />
   </component>
 </project>

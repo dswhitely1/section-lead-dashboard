@@ -3,21 +3,25 @@ import { useSelector } from 'react-redux';
 import { ActionsContext } from '../../contexts/ActionsContext';
 import SprintNavigation from './SprintNavigation';
 import SprintCard from './SprintCard';
+import Container  from '@material-ui/core/Container';
+import {makeStyles} from '@material-ui/core/styles'
 
+const useStyles = makeStyles(theme=>({
+  cards: {
+    padding: theme.spacing(2)
+  }
+}))
 function SprintsDashboard() {
-  const {
-    sprintActions: { fetchSprints },
-    unitActions: { fetchUnits },
-  } = useContext(ActionsContext);
+const classes=useStyles();
   const sprints = useSelector(state => state.sprint.sprints);
-  useEffect(() => fetchUnits(), [fetchUnits]);
-  useEffect(() => fetchSprints(), [fetchSprints]);
   return (
     <>
       <SprintNavigation />
+      <Container className={classes.cards}>
       {sprints.map(sprint => (
         <SprintCard key={sprint.id} sprint={sprint} />
       ))}
+      </Container>
     </>
   );
 }

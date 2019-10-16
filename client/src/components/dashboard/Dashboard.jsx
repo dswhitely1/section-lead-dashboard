@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { ActionsContext } from '../../contexts/ActionsContext';
+import HomePage from '../homepage/HomePage';
 
-function Dashboard() {
-  return <h1>Dashboard</h1>;
+function Dashboard () {
+  const {
+    sprintActions: { fetchSprints },
+    unitActions: { fetchUnits },
+  } = useContext(ActionsContext);
+
+  useEffect(() => {
+    fetchSprints();
+    fetchUnits();
+  }, []);
+
+  return (
+    <HomePage />
+  );
 }
 
 export default Dashboard;
