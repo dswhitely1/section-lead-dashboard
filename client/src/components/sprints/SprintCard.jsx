@@ -15,16 +15,11 @@ import {
 } from '@material-ui/core';
 import { ActionsContext } from '../../contexts/ActionsContext';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
   card: {
     width: 480,
-    padding: theme.spacing(1),
-  },
-  root: {
-    padding: theme.spacing(3, 2),
-    display: 'flex',
   },
 }));
 
@@ -46,29 +41,29 @@ function SprintCard ({ sprint }) {
   }
 
   return (
-    <Paper className={classes.root}>
+    <Grid
+      item
+      xs
+    >
       <Card className={classes.card}>
         <CardContent>
           <Typography
-            variant='h4'
+            variant='h5'
             component='h1'
           >
             {sprint.name}
           </Typography>
           <Typography
-            variant='h5'
+            variant='h6'
             component='h2'
             color='textSecondary'
             gutterBottom
           >
             {unit.name}
           </Typography>
+          <Link href={`${sprint.sprintLink}`}>Sprint Link</Link>
         </CardContent>
         <CardActions>
-          <Link
-            href={`${sprint.sprintLink}`}
-            component={Button}
-          >Sprint Link</Link>
           <Button>Edit</Button>
           <Button onClick={() => setOpen(true)}>Delete</Button>
           <Dialog
@@ -86,7 +81,7 @@ function SprintCard ({ sprint }) {
           </Dialog>
         </CardActions>
       </Card>
-    </Paper>
+    </Grid>
   );
 }
 
